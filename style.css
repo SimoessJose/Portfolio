@@ -1,5 +1,6 @@
 body,
 html {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   font-family: Verdana;
@@ -8,7 +9,7 @@ html {
 }
 
 main {
-  height: 80vh;
+  height: 100%;
 }
 
 .container {
@@ -30,11 +31,15 @@ main {
   align-items: center;
 }
 
-main h2 {
+.text h2 {
   margin-top: 0;
   margin-left: 200px;
   justify-content: center;
-  background: linear-gradient(0deg, rgba(79,147,248,1) 0%, rgba(185,107,196,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(79, 147, 248, 1) 0%,
+    rgba(185, 107, 196, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -58,13 +63,20 @@ p {
   color: #ffffff;
 }
 
+.cardsm p {
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0px;
+}
+
 .logo {
   width: 60px;
   height: 50px;
 }
 
 nav {
-  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -178,6 +190,21 @@ nav li a:hover {
   margin-bottom: 20px;
 }
 
+.cardsm {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  width: 700px;
+  height: 900px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 10px 10px 10px #181818;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .footer-basic {
   width: 100%;
   height: 260px;
@@ -188,6 +215,9 @@ nav li a:hover {
   -webkit-backdrop-filter: blur(4.3px);
   padding: 25px;
   color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
 }
 
 .footer-basic ul {
@@ -214,6 +244,7 @@ nav li a:hover {
 }
 
 .social {
+  margin: auto;
   text-align: center;
   padding-bottom: 25px;
 }
@@ -334,4 +365,140 @@ nav li a:hover {
   margin: auto;
   margin-top: 10px;
   margin-left: 0;
+}
+
+.habilidades-pd {
+  padding-top: 93px;
+}
+
+.habilidades-pd h2 {
+  text-align: center;
+  padding-bottom: 70px;
+  color: #fff;
+}
+
+.conteiner-skills {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 37px;
+  max-width: 55%;
+}
+
+.skill-box {
+  height: 106px;
+  width: 106px;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease 0.3s;
+}
+
+.skill-box:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+#habilidades {
+  margin: auto;
+  margin-bottom: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .conteiner-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 37px;
+    max-width: 300px;
+  }
+}
+
+.skill-box .icones-habilidades {
+  transition: ease-in-out 0.3s;
+}
+
+.skill-box:hover .icones-habilidades {
+  opacity: 0;
+}
+
+.skill1 {
+  background-image: url(img/html2.svg);
+}
+
+.skill2 {
+  background-image: url(../img/css2.svg);
+}
+
+.skill3 {
+  background-image: url(../img/js2.svg);
+}
+
+.projetos {
+  padding-top: 93px;
+}
+
+.projetos h2,
+.projetos a {
+  text-align: center;
+}
+
+.projetos h2 {
+  text-align: center;
+  padding-bottom: 70px;
+  color: #fff;
+}
+
+.pro {
+  background-color: #c4c4c4;
+  height: 195px;
+  width: 310px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+}
+
+.pro:hover {
+  letter-spacing: 5px;
+}
+
+.projetos-itens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29.5px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .projetos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projetos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projetos-itens {
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px) {
+  .pro {
+    max-width: 300px;
+  }
 }
