@@ -8,14 +8,12 @@ html {
   overflow-x: hidden;
 }
 
-main {
-  height: 100%;
-}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
   margin-top: 150px;
   color: #bdbdbd;
 }
@@ -128,7 +126,7 @@ nav li a:hover {
     position: absolute;
     top: 6vh;
     right: 0;
-    width: 50vh;
+    width: 50%;
     height: 80vh;
     background: #23232e;
     flex-direction: column;
@@ -207,7 +205,7 @@ nav li a:hover {
 
 .footer-basic {
   width: 100%;
-  height: 260px;
+  height: 270px;
   background: #23232e;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -244,17 +242,19 @@ nav li a:hover {
 }
 
 .social {
+  display: flex;
   margin: auto;
+  justify-content: center;
   text-align: center;
   padding-bottom: 25px;
 }
 
 .social > a {
+
   font-size: 24px;
   width: 40px;
   height: 40px;
   line-height: 40px;
-  display: inline-block;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #ccc;
@@ -322,12 +322,29 @@ nav li a:hover {
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  width: 600px;
+  width: 70%;
   height: 400px;
   background: #212121;
   box-shadow: 10px 10px 10px #181818;
   padding: 40px;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%; /* Reduza a largura para telas menores */
+    margin-top: 60px; /* Ajuste a margem superior para telas menores */
+    margin-bottom: 100px; /* Ajuste a margem inferior para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    width: 90%; /* Reduza ainda mais a largura para telas ainda menores */
+    margin-top: 30px; /* Ajuste a margem superior para telas ainda menores */
+    margin-bottom: 50px; /* Ajuste a margem inferior para telas ainda menores */
+    padding: 20px; /* Reduza o espaçamento interno para telas ainda menores */
+  }
 }
 
 .form .title {
@@ -500,5 +517,29 @@ nav li a:hover {
 @media (max-width: 950px) {
   .pro {
     max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Estilos para telas menores que 768px */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* ajuste a altura conforme necessário */
+  }
+
+  .text {
+    margin: auto;
+    align-items: center;
+    margin-left: -145px;
+  }
+
+  .image img {
+    margin: auto;
+    width: 100%;
+    margin-left: 100px;
+    
   }
 }
