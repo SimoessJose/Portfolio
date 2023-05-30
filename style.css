@@ -38,6 +38,7 @@ html {
     rgba(79, 147, 248, 1) 0%,
     rgba(185, 107, 196, 1) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -48,6 +49,7 @@ nav h2 {
   text-transform: uppercase;
   letter-spacing: 4px;
   background: -webkit-linear-gradient(#eee, #333);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -57,7 +59,6 @@ nav h2 {
 }
 
 p {
-  font-size: xx-large;
   color: #ffffff;
 }
 
@@ -108,6 +109,8 @@ nav li a:hover {
 .mobile-menu {
   display: none;
   cursor: pointer;
+  position: relative;
+  z-index: 2; /* Aumentado */
 }
 
 .mobile-menu div {
@@ -134,6 +137,7 @@ nav li a:hover {
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    z-index: 3; /* Adicionado */
   }
 
   .nav-list li {
@@ -244,14 +248,13 @@ nav li a:hover {
 
 .social {
   display: flex;
-  margin: auto;
   justify-content: center;
   text-align: center;
   padding-bottom: 25px;
+  position: relative; /* Adicionado */
+  z-index: 1; /* Adicionado */
 }
-
 .social > a {
-
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -263,6 +266,7 @@ nav li a:hover {
   color: inherit;
   opacity: 0.75;
 }
+
 
 .social > a :hover {
   transform: translateY(-2px);
@@ -333,18 +337,18 @@ nav li a:hover {
 
 @media (max-width: 768px) {
   .form {
-    width: 80%; /* Reduza a largura para telas menores */
-    margin-top: 60px; /* Ajuste a margem superior para telas menores */
-    margin-bottom: 100px; /* Ajuste a margem inferior para telas menores */
+    width: 80%; 
+    margin-top: 60px; 
+    margin-bottom: 100px; 
   }
 }
 
 @media (max-width: 480px) {
   .form {
-    width: 90%; /* Reduza ainda mais a largura para telas ainda menores */
-    margin-top: 30px; /* Ajuste a margem superior para telas ainda menores */
-    margin-bottom: 50px; /* Ajuste a margem inferior para telas ainda menores */
-    padding: 20px; /* Reduza o espaçamento interno para telas ainda menores */
+    width: 90%; 
+    margin-top: 30px; 
+    margin-bottom: 50px; 
+    padding: 20px; 
   }
 }
 
@@ -476,8 +480,8 @@ nav li a:hover {
 
 .pro {
   background-color: #c4c4c4;
-  height: 195px;
-  width: 310px;
+  height: 300px;
+  width: 500px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -487,8 +491,32 @@ nav li a:hover {
   transition: ease-in-out 0.3s;
 }
 
+ 
 .pro:hover {
   letter-spacing: 5px;
+  background-color: #8a8989;
+}
+
+.pro a{
+  color: #000000;
+  transition: 0,5s;
+  text-decoration: none;
+}
+
+.pro p{
+  color: #000000;
+  display: none;
+  font-size: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.pro:hover p{
+  position: absolute;
+  display: block;
+  font-size: 15px;
+  opacity: 1;
+  max-width: 350px;
 }
 
 .projetos-itens {
@@ -522,13 +550,13 @@ nav li a:hover {
 }
 
 @media (max-width: 768px) {
-  /* Estilos para telas menores que 768px */
+  
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* ajuste a altura conforme necessário */
+    height: 100%; 
   }
 
   .text {
