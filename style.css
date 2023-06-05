@@ -479,44 +479,55 @@ nav li a:hover {
 }
 
 .pro {
+  position: relative;
   background-color: #c4c4c4;
   height: 300px;
-  width: 500px;
+  width: 430px;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
   transition: ease-in-out 0.3s;
+  text-align: center; /* Centraliza o texto horizontalmente */
 }
 
- 
 .pro:hover {
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   background-color: #8a8989;
 }
 
-.pro a{
-  color: #000000;
-  transition: 0,5s;
-  text-decoration: none;
+.pro a {
+  color: #ffffff;
+  transition: 0.5s;
 }
 
-.pro p{
-  color: #000000;
+.pro p {
   display: none;
-  font-size: 30px;
+  position: absolute;
   margin: auto;
-  margin-bottom: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: #ffffff;
+  background-color: rgba(70, 70, 70, 0.7);
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  width: 100%;
 }
 
-.pro:hover p{
-  position: absolute;
+.pro:hover p {
   display: block;
-  font-size: 15px;
+  margin: auto;
+  font-size: 14px;
   opacity: 1;
-  max-width: 350px;
+  width: 98%;
 }
 
 .projetos-itens {
@@ -525,6 +536,14 @@ nav li a:hover {
   gap: 29.5px;
   width: 100%;
   justify-content: center;
+}
+
+.centralizador.projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 @media (max-width: 1200px) {
