@@ -379,6 +379,7 @@ nav li a:hover {
   padding-top: 93px;
 }
 
+
 .habilidades-pd-css {
   padding-top: 93px;
   display: flex;
@@ -452,7 +453,7 @@ nav li a:hover {
 }
 
 .skill1 {
-  background-image: url(img/html2.svg);
+  background-image: url(../img/html2.svg);
 }
 
 .skill2 {
