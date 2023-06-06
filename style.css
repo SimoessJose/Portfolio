@@ -393,9 +393,23 @@ nav li a:hover {
   padding-top: 93px;
 }
 
+.habilidades-pd-css {
+  padding-top: 93px;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 .habilidades-pd h2 {
   text-align: center;
   padding-bottom: 70px;
+  color: #fff;
+}
+
+.habilidades-pd-css h2 {
+  text-align: center;
   color: #fff;
 }
 
@@ -691,4 +705,42 @@ nav li a:hover {
       margin-right: 0;
   }
 
+}
+
+.cardl{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #646464;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  height: 30%;
+  width: 50%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+ 
+.cardl h2, h3{
+  color: #fff;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  bottom: 0px;
+
+}
+
+.cardl ul{
+  color: white;
+  top: 10px;
+}
+
+iframe{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+  border-radius: 20px;
 }
