@@ -8,22 +8,22 @@ html {
   overflow-x: hidden;
 }
 
-
 .container {
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
   margin-top: 150px;
   color: #bdbdbd;
 }
 
 .text {
   text-align: center;
+  margin: auto;
+  margin-top: 100px;
 }
 
 .image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +110,7 @@ nav li a:hover {
   display: none;
   cursor: pointer;
   position: relative;
-  z-index: 2; /* Aumentado */
+  z-index: 2;
 }
 
 .mobile-menu div {
@@ -152,6 +152,14 @@ nav li a:hover {
   .nav-list.active {
     position: absolute;
     transform: translateX(0);
+  }
+
+  .image {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
   }
 }
 
@@ -221,6 +229,7 @@ nav li a:hover {
   align-items: center;
   justify-content: center;
   bottom: 0;
+  margin-bottom: 0;
 }
 
 .footer-basic ul {
@@ -266,7 +275,6 @@ nav li a:hover {
   color: inherit;
   opacity: 0.75;
 }
-
 
 .social > a :hover {
   transform: translateY(-2px);
@@ -327,7 +335,7 @@ nav li a:hover {
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  width: 70%;
+  width: 50%;
   height: 400px;
   background: #212121;
   box-shadow: 10px 10px 10px #181818;
@@ -337,18 +345,18 @@ nav li a:hover {
 
 @media (max-width: 768px) {
   .form {
-    width: 80%; 
-    margin-top: 60px; 
-    margin-bottom: 100px; 
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .form {
-    width: 90%; 
-    margin-top: 30px; 
-    margin-bottom: 50px; 
-    padding: 20px; 
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
   }
 }
 
@@ -583,13 +591,12 @@ nav li a:hover {
 }
 
 @media (max-width: 768px) {
-  
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; 
+    height: 100%;
   }
 
   .text {
@@ -602,7 +609,6 @@ nav li a:hover {
     margin: auto;
     width: 100%;
     margin-left: 100px;
-    
   }
 }
 
@@ -616,11 +622,10 @@ nav li a:hover {
 }
 
 .sobre-mim h2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 45px;
   color: white;
 }
-
 
 .avatar {
   width: 323px;
@@ -635,28 +640,27 @@ nav li a:hover {
 
 @keyframes html {
   0% {
-      bottom: 0;
-      left: 250px;
+    bottom: 0;
+    left: 250px;
   }
   100% {
-      bottom: 0;
-      left: 50px;
+    bottom: 0;
+    left: 50px;
   }
 }
 
 @keyframes css {
   0% {
-      bottom: 0;
-      left: 50px;
+    bottom: 0;
+    left: 50px;
   }
   100% {
-      bottom: 0;
-      left: 250px;
+    bottom: 0;
+    left: 250px;
   }
 }
 
-
-.sobre-mim{
+.sobre-mim {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -669,45 +673,43 @@ nav li a:hover {
   color: white;
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .ajustador-2 {
-      justify-content: center;
-      text-align: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .avatar {
-      margin-right: 60px;
+    margin-right: 60px;
   }
 
   h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .ajustador-2 p {
-      font-size: 15px;
+    font-size: 15px;
   }
   .sobre-mim p {
-      text-indent: 0;
+    text-indent: 0;
   }
 }
 
-@media(max-width:950px){
-
+@media (max-width: 950px) {
   .circulo {
-      display: none;
+    display: none;
   }
   .ajustador-2 {
-      max-width: 350px;
-      padding: 70px 30px;
+    max-width: 350px;
+    padding: 70px 30px;
   }
 
   .avatar {
-      margin-right: 0;
+    margin-right: 0;
   }
-
 }
 
-.cardl{
+.cardl {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -719,22 +721,22 @@ nav li a:hover {
   border-radius: 20px;
   overflow: hidden;
 }
- 
-.cardl h2, h3{
+
+.cardl h2,
+h3 {
   color: #fff;
   display: flex;
   margin: auto;
   align-items: center;
   bottom: 0px;
-
 }
 
-.cardl ul{
+.cardl ul {
   color: white;
   top: 10px;
 }
 
-iframe{
+iframe {
   display: flex;
   margin: auto;
   width: 90%;
